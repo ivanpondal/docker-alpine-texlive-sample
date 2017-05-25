@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  watcher:
+    build: .
+    command: sh /home/latex_watcher.sh informe.tex
+    stop_signal: SIGKILL
+    volumes:
+      - .:/workdir:Z
